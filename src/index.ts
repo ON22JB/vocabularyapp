@@ -171,8 +171,18 @@ function initApp() {
 }
 initApp();
 
+//print the vocabulary list table
+let printBtn = document.querySelector("#printBtn") as HTMLButtonElement;
+let printArea = document.querySelector("#printArea") as HTMLDivElement;
+function print() {
+  window.print();
+}
+printBtn.addEventListener("click", print);
 
 
+
+
+//Open fullscreen
 let elem = document.documentElement as HTMLElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
