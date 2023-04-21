@@ -6,6 +6,7 @@
 const newVocabEnInput = document.querySelector("#newVocabEnInput") as HTMLInputElement; 
 const newVocabDeInput = document.querySelector("#newVocabDeInput") as HTMLInputElement;
 const newVocabBtn = document.querySelector("#newVocabBtn") as HTMLButtonElement;
+const emptyVocabBtn = document.querySelector("#emptyVocabBtn") as HTMLButtonElement;
 
 //Check if correct input or not with message
 const validatorMessage = document.querySelector("#validatorMessage") as HTMLSpanElement;
@@ -115,7 +116,7 @@ function reloadVocabEn() {
     .forEach((vocabEn) => {
       const singleVocabEnContainer = document.createElement("div");
       singleVocabEnContainer.id = vocabEn.id;
-      singleVocabEnContainer.innerHTML = ` ${vocabEn.description}</p>`;
+      singleVocabEnContainer.innerHTML = ` ${vocabEn.description}`;
       vocabEnContainer.appendChild(singleVocabEnContainer);
     });}
 
@@ -127,7 +128,7 @@ function reloadVocabEn() {
     .forEach((vocabDe) => {
       const singleVocabDeContainer = document.createElement("div");
       singleVocabDeContainer.id = vocabDe.id;
-      singleVocabDeContainer.innerHTML = `${vocabDe.description}</p> `;
+      singleVocabDeContainer.innerHTML = `${vocabDe.description} `;
       vocabDeContainer.appendChild(singleVocabDeContainer);
     });
 }
@@ -139,10 +140,23 @@ function hasPressedEnterKeyOnTodoInput(e: KeyboardEvent) {
   }
 }
 
+//Clear whole List
+function emptyVocabList(){
+  vocabEnContainer.innerHTML="";
+  vocabDeContainer.innerHTML="";
+  while(vocabEn.length){
+    vocabEn.pop();
+  }
+  while(vocabDe.length){
+    vocabDe.pop();
+  }
+}
+
 //main function
 function initApp() {
   newVocabBtn.disabled = true;
   newVocabBtn.addEventListener("click", addVocabEn);
+  emptyVocabBtn.addEventListener("click", emptyVocabList);
   newVocabEnInput.addEventListener("input", validateInput);
   newVocabDeInput.addEventListener("input", validateInput);
   newVocabEnInput.addEventListener("keydown", hasPressedEnterKeyOnTodoInput);
