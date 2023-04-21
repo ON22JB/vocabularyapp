@@ -7,6 +7,8 @@ const newVocabEnInput = document.querySelector("#newVocabEnInput") as HTMLInputE
 const newVocabDeInput = document.querySelector("#newVocabDeInput") as HTMLInputElement;
 const newVocabBtn = document.querySelector("#newVocabBtn") as HTMLButtonElement;
 const emptyVocabBtn = document.querySelector("#emptyVocabBtn") as HTMLButtonElement;
+const fullScBtn = document.querySelector("#fullScBtn") as HTMLButtonElement;
+
 
 //Check if correct input or not with message
 const validatorMessage = document.querySelector("#validatorMessage") as HTMLSpanElement;
@@ -62,7 +64,7 @@ function validateInput() {
 
 //Messages for User after the check of input (write blue text)
 function setValidatorMesssage(msg: string, error = false) {
-  validatorMessage.innerHTML = msg;
+  validatorMessage.innerHTML = msg; 
     validatorMessage.style.color = "black";
 }
 const ValidatorMessages = {
@@ -161,9 +163,19 @@ function initApp() {
   newVocabBtn.addEventListener("click", addVocabEn);
   emptyVocabBtn.disabled = true;
   emptyVocabBtn.addEventListener("click", emptyVocabList);
+  fullScBtn.addEventListener("click", openFullscreen);
   newVocabEnInput.addEventListener("input", validateInput);
   newVocabDeInput.addEventListener("input", validateInput);
   newVocabEnInput.addEventListener("keydown", hasPressedEnterKeyOnTodoInput);
   newVocabDeInput.addEventListener("keydown", hasPressedEnterKeyOnTodoInput);
 }
 initApp();
+
+
+
+let elem = document.documentElement as HTMLElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } 
+}

@@ -62,11 +62,11 @@
 </header>
 <br> <br> 
 <div class="container">
+  <h3 >Neue Vokabeln hinzufügen:</h3> <br>
 <div  class="notice" style="max-width: 50%; margin-left: auto; margin-right: auto;">
-    <h3 >Neue Vokabeln hinzufügen:</h3> <br>
     <div class="container" style="text-align: center;">
     <input type="text"  style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabEnInput" id="newVocabEnInput" placeholder="Englisch" />
-    <input type="text" style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabDeInput" id="newVocabDeInput" placeholder="Deutsch"/> <br> <br>
+    <input type="text" style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabDeInput" id="newVocabDeInput" placeholder="Deutsch"/> <br> 
     </div>
     <div class="container" style="max-width:auto; display: inline-flex; justify-content:center;">
     <button id="newVocabBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff; margin:5px;">Hinzufügen</button>
@@ -75,8 +75,8 @@
     <br>
     <small><span id="validatorMessage"></span></small>
   </div> <br>
-<h5 style="text-align: center;"> Vokabelliste:</h5>
-<div class="table_container">
+<h5 style="text-align: center;"> Vokabelliste:</h5> <br>
+<div class="table_container" id="printArea">
 <table class="boostrap4_table_head_dark_striped_rounded_with_shadow" style="max-width: 50%; margin-left: auto; margin-right: auto; ">
     <thead>
       <tr>
@@ -90,7 +90,13 @@
         <td><div id="vocabDeContainer"></div></td>
       </tr>
     </tbody>
-  </table>
+  </table> <br>
+
+  <p style="max-width: 50%; margin-left: auto; margin-right: auto;"> Du möchtest alles größer und somit genauer sehen können? Dann wechsel doch in den Vollbildmodus! Um diesen wieder zu verlassen, drücke einfach die "ESC" taste auf deiner Tastatur. </p> 
+  <div class="container" style="max-width:auto; display: inline-flex; justify-content:center;">
+  <button id="fullScBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff;  ">Vollbildmodus</button>
+</div>
+</div>
 </div>
   <div id="test">
     <p>PLATZHALTER FÜR DEN TEST <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto delectus magnam obcaecati labore aspernatur reprehenderit quos laborum enim animi? Autem dignissimos ratione ad. Suscipit, a voluptates. Sunt, saepe eius?</p>
