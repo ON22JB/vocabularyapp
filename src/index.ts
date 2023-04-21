@@ -85,7 +85,7 @@ function addVocabEn() {
     timestamp,
   };
   vocabEn.push(newVocabEn);
-
+  reloadVocabEn();
   addVocabDe();
   newVocabEnInput.value = "";
 }
@@ -102,9 +102,35 @@ function addVocabDe() {
     timestamp,
   };
   vocabDe.push(newVocabDe);
+  reloadVocabDe();
   newVocabDeInput.value = "";
 }
 
+//Empty Vocabulary List, Create Container for Vocabulary (En)
+function reloadVocabEn() {
+  vocabEnContainer.innerHTML = "";
+  //sorting Vocabulary
+  vocabEn
+    .sort((vocab1, vocab2) => {return vocab2.timestamp.getTime() - vocab1.timestamp.getTime();})
+    .forEach((vocabEn) => {
+      const singleVocabEnContainer = document.createElement("div");
+      singleVocabEnContainer.id = vocabEn.id;
+      singleVocabEnContainer.innerHTML = ` ${vocabEn.description}</p>`;
+      vocabEnContainer.appendChild(singleVocabEnContainer);
+    });}
+
+//Empty Vocabulary List, Create Container for Vocabulary (De)
+    function reloadVocabDe() {
+      vocabDeContainer.innerHTML = "";
+    vocabDe
+    .sort((vocab3, vocab4) => {return vocab4.timestamp.getTime() - vocab3.timestamp.getTime();})
+    .forEach((vocabDe) => {
+      const singleVocabDeContainer = document.createElement("div");
+      singleVocabDeContainer.id = vocabDe.id;
+      singleVocabDeContainer.innerHTML = `${vocabDe.description}</p> `;
+      vocabDeContainer.appendChild(singleVocabDeContainer);
+    });
+}
 
 
 //main function
@@ -113,7 +139,6 @@ function initApp() {
   newVocabBtn.addEventListener("click", addVocabEn);
   newVocabEnInput.addEventListener("input", validateInput);
   newVocabDeInput.addEventListener("input", validateInput);
-
 }
 
 
