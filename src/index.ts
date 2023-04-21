@@ -72,6 +72,41 @@ const ValidatorMessages = {
 let vocabEn: VocabEn[] = [];
 let vocabDe: VocabDe[] = [];
 
+//Add new Vocabulary (En) 
+function addVocabEn() {
+  //if input not correct:
+  if (!validateInput()) {
+    return; 
+  }
+  const timestamp = new Date();
+  const newVocabEn: VocabEn = {
+    description: newVocabEnInput.value, 
+    id: `${genUniqueId()}`,
+    timestamp,
+  };
+  vocabEn.push(newVocabEn);
+
+  addVocabDe();
+  newVocabEnInput.value = "";
+}
+//Add new Vocabulary (De)
+function addVocabDe() {
+  //if input not correct:
+  if (!validateInput()) {
+    return; 
+  }
+  const timestamp = new Date();
+  const newVocabDe: VocabDe = {
+    description: newVocabDeInput.value,
+    id: `${genUniqueId()}`,
+    timestamp,
+  };
+  vocabDe.push(newVocabDe);
+  newVocabDeInput.value = "";
+}
+
+
+
 //main function
 function initApp() {
   newVocabBtn.disabled = true;
