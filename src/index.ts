@@ -68,4 +68,7 @@ const ValidatorMessages = {
   INPUT_VALID: "Drücke den Knopf oder Enter um deine Eingabe zu bestätigen!",
 };
 
+//Adding Arrays to fill with the Vocabs (En & De)
+let vocabEn: VocabEn[] = [];
+let vocabDe: VocabDe[] = [];
 
