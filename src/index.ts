@@ -144,6 +144,8 @@ function hasPressedEnterKeyOnTodoInput(e: KeyboardEvent) {
 function emptyVocabList(){
   vocabEnContainer.innerHTML="";
   vocabDeContainer.innerHTML="";
+  newVocabEnInput.innerHTML = "";
+  newVocabDeInput.innerHTML = "";
   while(vocabEn.length){
     vocabEn.pop();
   }
