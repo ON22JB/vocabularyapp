@@ -54,6 +54,7 @@ function validateInput() {
   }
   else {
       newVocabBtn.disabled = false;
+      emptyVocabBtn.disabled = false;
     setValidatorMesssage(ValidatorMessages.INPUT_VALID);
     return true;
   }
@@ -158,6 +159,7 @@ function emptyVocabList(){
 function initApp() {
   newVocabBtn.disabled = true;
   newVocabBtn.addEventListener("click", addVocabEn);
+  emptyVocabBtn.disabled = true;
   emptyVocabBtn.addEventListener("click", emptyVocabList);
   newVocabEnInput.addEventListener("input", validateInput);
   newVocabDeInput.addEventListener("input", validateInput);
