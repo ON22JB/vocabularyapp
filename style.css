@@ -77,7 +77,7 @@
 /*links & hover*/
 li a {
   text-decoration: none;
-  color:#002e79;
+  color:#4984e3;
 }
 li a:hover{
   color: #4984e3;
@@ -88,4 +88,67 @@ li a:hover{
 
 input{
   outline: none;
+}
+
+
+/*Vocabulary List Style*/
+table.boostrap4_table_head_dark_striped_rounded_with_shadow {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+table.boostrap4_table_head_dark_striped_rounded_with_shadow thead th {
+  font-size: 1rem;
+  line-height: 1.5;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  text-align: inherit;
+  padding: .75rem;
+  vertical-align: bottom;
+  border-bottom: 1px solid #dee2e6;
+  color: #fff;
+  background-color: #4984e3;
+  border-color: #000;
+}
+
+table.boostrap4_table_head_dark_striped_rounded_with_shadow td {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  padding: .75rem;
+  vertical-align: top;
+}
+
+table.boostrap4_table_head_dark_striped_rounded_with_shadow tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+table.boostrap4_table_head_dark_striped_rounded_with_shadow th:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+table.boostrap4_table_head_dark_striped_rounded_with_shadow th:last-of-type {
+  border-top-right-radius: 10px;
+}
+
+table.boostrap4_table_head_dark_striped_rounded_with_shadow tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+
+table.boostrap4_table_head_dark_striped_rounded_with_shadow tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
 }
