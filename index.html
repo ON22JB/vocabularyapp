@@ -50,8 +50,42 @@
             <li> Frage dich selbst ab und erweitere dein Vokabel-Wissen! </li>
         </ul>
         <br>  
-    </header>
+        <h2 id="anleitung"> Kurzanleitung</h2> <br>
+        <ol>
+            <li> Gehe zu den <a href="#newVocabEnInput"> Eingabefeldern. </a> </li> <br>
+            <li> Tippe deine Englischen Vokabeln und ihre Deutschen Übersetzungen in die dafür vorgesehenen Eingabefelder ein. </li><br>
+            <li> Klicke auf den <a href="#newVocabBtn"> "Hinzufügen"</a> Button, um deine Eingaben in deine <a href="#vocabEnContainer"> Vokabelliste</a>  zu übernehmen. Damit du dich nicht mit veralteten Eingaben herumplagen musst, leert sich die erstellte Vokabelliste beim Neuladen der Anwendung. So kannst du deine eigene Vokabelliste stehts auf dem akutellsten Stand halten-</li><br>
+            <li> Nun hast du einen Überblick über all deine erstellten Vokabeln! </li> 
+        </ol>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magni quod consectetur, ullam beatae vitae commodi iusto, molestiae debitis expedita necessitatibus quis id nesciunt maiores dolores fuga maxime fugiat! Possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, expedita tempore rem numquam autem ut, optio ea sunt praesentium similique cumque non. Illo quia unde, laboriosam ut corporis fugit iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem minus impedit quaerat perferendis reprehenderit hic, fuga blanditiis magnam modi quod dicta maiores illo quia officiis ab praesentium quisquam facilis culpa? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum totam architecto hic sequi ea labore praesentium quia, iure, voluptates obcaecati quod aliquid enim. Voluptatum, sunt hic libero repellat veritatis placeat?</p>
+    
+    </div>
+</header>
+<br> <br> 
 <div class="container">
+<div class="notice">
+    <h3>Neue Vokabeln hinzufügen:</h3> <br>
+    <input type="text" style="border-radius: 1px; border-color: #002e79 ;border-radius: 5px;"name="newVocabEnInput" id="newVocabEnInput" placeholder="Englisch"/>
+    <input type="text" style="border-radius: 1px; border-color: #002e79;border-radius: 5px;"name="newVocabDeInput" id="newVocabDeInput" placeholder="Deutsch"/><br>
+    <br>
+    <button id="newVocabBtn" class="btn" style="border-radius: 1px; border-color: #002e79;border-radius: 5px;">Hinzufügen</button><br>
+    <small><span id="validatorMessage"></span></small>
+  </div> <br>
+<h5> Vokabelliste:</h5>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Englisch</th>
+        <th scope="col">Deutsch</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div id="vocabEnContainer"></div></td>
+        <td><div id="vocabDeContainer"></div></td>
+      </tr>
+    </tbody>
+  </table>
   <div id="test">
     <p>PLATZHALTER FÜR DEN TEST <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto delectus magnam obcaecati labore aspernatur reprehenderit quos laborum enim animi? Autem dignissimos ratione ad. Suscipit, a voluptates. Sunt, saepe eius?</p>
 </div>
