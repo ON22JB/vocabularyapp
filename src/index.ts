@@ -148,6 +148,4 @@ function initApp() {
   newVocabEnInput.addEventListener("keydown", hasPressedEnterKeyOnTodoInput);
   newVocabDeInput.addEventListener("keydown", hasPressedEnterKeyOnTodoInput);
 }
-
-
 initApp();
