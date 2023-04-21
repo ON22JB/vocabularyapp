@@ -26,6 +26,32 @@ interface VocabDe {
   timestamp: Date;
 }
 
+//Check if input field has an input 
+function validateInput() {
+  if (!newVocabEnInput.value) {
+      newVocabBtn.disabled = true;
+    setValidatorMesssage(ValidatorMessages.INPUT_EMTPY, true);
+    return false;
+  }
+  if (!newVocabDeInput.value) {
+      newVocabBtn.disabled = true;
+    setValidatorMesssage(ValidatorMessages.INPUT_EMTPY, true);
+    return false;
+  }
+  else {
+      newVocabBtn.disabled = false;
+    setValidatorMesssage(ValidatorMessages.INPUT_VALID);
+    return true;
+  }
+}
 
-
+//Messages for User after the check of input (write blue text)
+function setValidatorMesssage(msg: string, error = false) {
+  validatorMessage.innerHTML = msg;
+    validatorMessage.style.color = "blue";
+}
+const ValidatorMessages = {
+  INPUT_EMTPY: "Es fehlen noch Eingaben :) ",
+  INPUT_VALID: "Drücke den Knopf oder Enter um deine Eingabe zu bestätigen!",
+};
 
