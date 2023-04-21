@@ -72,3 +72,11 @@ const ValidatorMessages = {
 let vocabEn: VocabEn[] = [];
 let vocabDe: VocabDe[] = [];
 
+//main function
+function initApp() {
+  newVocabBtn.disabled = true;
+
+}
+
+
+initApp();
