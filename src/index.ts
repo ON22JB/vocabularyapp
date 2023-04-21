@@ -63,11 +63,11 @@ function validateInput() {
 //Messages for User after the check of input (write blue text)
 function setValidatorMesssage(msg: string, error = false) {
   validatorMessage.innerHTML = msg;
-    validatorMessage.style.color = "blue";
+    validatorMessage.style.color = "black";
 }
 const ValidatorMessages = {
   INPUT_EMTPY: "Es fehlen noch Eingaben :) ",
-  INPUT_VALID: "Drücke den Knopf oder Enter um deine Eingabe zu bestätigen!",
+  INPUT_VALID: "Drücke 'Hinzufügen' oder Enter um deine Eingabe zu bestätigen! Mit 'Liste leeren' entfernst du alle Einträge. ",
 };
 
 //Adding Arrays to fill with the Vocabs (En & De)

@@ -55,23 +55,29 @@
             <li> Gehe zu den <a href="#newVocabEnInput"> Eingabefeldern. </a> </li> <br>
             <li> Tippe deine Englischen Vokabeln und ihre Deutschen Übersetzungen in die dafür vorgesehenen Eingabefelder ein. </li><br>
             <li> Klicke auf den <a href="#newVocabBtn"> "Hinzufügen"</a> Button, um deine Eingaben in deine <a href="#vocabEnContainer"> Vokabelliste</a>  zu übernehmen. Damit du dich nicht mit veralteten Eingaben herumplagen musst, leert sich die erstellte Vokabelliste beim Neuladen der Anwendung. So kannst du deine eigene Vokabelliste stehts auf dem akutellsten Stand halten-</li><br>
-            <li> Nun hast du einen Überblick über all deine erstellten Vokabeln! </li>  <br>
-            <li> Viel Spaß!  </li>
+            <li> Zum Entfernen aller Einträge in deiner Vokabelliste kannst du ganz einfach auf "Liste leeren" klicken. </li>  <br>
+            <li> Nun hast du einen Überblick über all deine erstellten Vokabeln! Viel Spaß beim Erstellen deines Lernsets!  </li>
         </ol>
     </div>
 </header>
 <br> <br> 
 <div class="container">
-<div  class="notice" style="max-width: 50%; margin-left: auto; margin-right: auto;  ">
+<div  class="notice" style="max-width: 50%; margin-left: auto; margin-right: auto;">
     <h3 >Neue Vokabeln hinzufügen:</h3> <br>
-    <input type="text"  style="border-radius: 1px; border-color: #000;border-radius: 5px;"name="newVocabEnInput" id="newVocabEnInput" placeholder="Englisch" />
-    <input type="text" style="border-radius: 1px; border-color: #000;border-radius: 5px;"name="newVocabDeInput" id="newVocabDeInput" placeholder="Deutsch"/> <br> <br>
-    <button id="newVocabBtn" class="btn" style="border-radius: 1px; border-color: #002e79;border-radius: 5px; background-color: #002e79; color:#fff">Hinzufügen</button>
-    <button id="emptyVocabBtn" class="btn" style="border-radius: 1px; border-color: #002e79;border-radius: 5px; background-color: #002e79; color:#fff">Liste leeren</button><br>
+    <div class="container" style="text-align: center;">
+    <input type="text"  style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabEnInput" id="newVocabEnInput" placeholder="Englisch" />
+    <input type="text" style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabDeInput" id="newVocabDeInput" placeholder="Deutsch"/> <br> <br>
+    </div>
+    <div class="container" style="max-width:auto; display: inline-flex; justify-content:center;">
+    <button id="newVocabBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff; margin:5px;">Hinzufügen</button>
+    <button id="emptyVocabBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff; margin:5px;">Liste leeren</button>
+    </div>
+    <br>
     <small><span id="validatorMessage"></span></small>
   </div> <br>
 <h5 style="text-align: center;"> Vokabelliste:</h5>
-<table class="table" style="max-width: 50%; margin-left: auto; margin-right: auto;">
+<div class="table_container">
+<table class="boostrap4_table_head_dark_striped_rounded_with_shadow" style="max-width: 50%; margin-left: auto; margin-right: auto; ">
     <thead>
       <tr>
         <th scope="col">Englisch</th>
@@ -85,6 +91,7 @@
       </tr>
     </tbody>
   </table>
+</div>
   <div id="test">
     <p>PLATZHALTER FÜR DEN TEST <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto delectus magnam obcaecati labore aspernatur reprehenderit quos laborum enim animi? Autem dignissimos ratione ad. Suscipit, a voluptates. Sunt, saepe eius?</p>
 </div>
