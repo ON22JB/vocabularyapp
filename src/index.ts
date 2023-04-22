@@ -180,8 +180,6 @@ function print() {
 printBtn.addEventListener("click", print);
 
 
-
-
 //Open fullscreen
 let elem = document.documentElement as HTMLElement;
 function openFullscreen() {

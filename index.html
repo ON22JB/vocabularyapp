@@ -41,6 +41,9 @@
             </svg>
             </div>
             </div>
+          </header>
+          
+          <div style="margin-left:20%; margin-right:20%;">
     <div class="container">
         <br> <br>
         <h2> Funktionen im Überblick</h2> <br>
@@ -54,13 +57,26 @@
         <ol>
             <li> Gehe zu den <a href="#newVocabEnInput"> Eingabefeldern. </a> </li> <br>
             <li> Tippe deine Englischen Vokabeln und ihre Deutschen Übersetzungen in die dafür vorgesehenen Eingabefelder ein. </li><br>
-            <li> Klicke auf den <a href="#newVocabBtn"> "Hinzufügen"</a> Button, um deine Eingaben in deine <a href="#vocabEnContainer"> Vokabelliste</a>  zu übernehmen. Damit du dich nicht mit veralteten Eingaben herumplagen musst, leert sich die erstellte Vokabelliste beim Neuladen der Anwendung. So kannst du deine eigene Vokabelliste stehts auf dem akutellsten Stand halten-</li><br>
+            <li> Klicke auf den <a href="#newVocabBtn"> "Hinzufügen"</a> Button, um deine Eingaben in deine <a href="#printArea"> Vokabelliste</a>  zu übernehmen. Damit du dich nicht mit veralteten Eingaben herumplagen musst, leert sich die erstellte Vokabelliste beim Neuladen der Anwendung. So kannst du deine eigene Vokabelliste stehts auf dem akutellsten Stand halten-</li><br>
             <li> Zum Entfernen aller Einträge in deiner Vokabelliste kannst du ganz einfach auf "Liste leeren" klicken. </li>  <br>
             <li> Nun hast du einen Überblick über all deine erstellten Vokabeln! Viel Spaß beim Erstellen deines Lernsets!  </li>
         </ol>
     </div>
-</header>
-<br> <br> 
+<br> <br>
+
+<div class="container">
+<div class="card">
+  <div class="card-header" style="background-color: #4984e3; color: #fff;">
+    Vollbildmodus
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Aktiviere den Vollbildmodus</h5>
+    <p class="card-text">Du möchtest alles größer und somit genauer sehen können? Dann wechsel doch in den Vollbildmodus! Um diesen wieder zu verlassen, drücke einfach die "ESC" taste auf deiner Tastatur.</p>
+    <button id="fullScBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff;  ">Vollbildmodus aktivieren</button>
+  </div>
+</div>
+</div><br> <br> 
+
 <div class="container">
   <h3 >Neue Vokabeln hinzufügen:</h3> <br>
 <div  class="notice" style="max-width: 50%; margin-left: auto; margin-right: auto;">
@@ -75,8 +91,8 @@
     <br>
     <small><span id="validatorMessage"></span></small>
   </div> <br>
-<h5 style="text-align: center;"> Vokabelliste:</h5> <br>
-<div class="printArea">
+<div class="printArea" id="printArea" >
+  <h5 style="text-align: center;"> Vokabelliste:</h5> <br>
 <table class="boostrap4_table_head_dark_striped_rounded_with_shadow" style="max-width: 50%; margin-left: auto; margin-right: auto; ">
     <thead>
       <tr>
@@ -92,22 +108,27 @@
     </tbody>
   </table> <br>
 
-  <p style="max-width: 50%; margin-left: auto; margin-right: auto;"> Du möchtest alles größer und somit genauer sehen können? Dann wechsel doch in den Vollbildmodus! Um diesen wieder zu verlassen, drücke einfach die "ESC" taste auf deiner Tastatur. </p> 
-  <div class="container" style="max-width:auto; display: inline-flex; justify-content:center;">
-  <button id="fullScBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff;  ">Vollbildmodus</button>
-</div>
-</div> <br> <br>
-<p style="max-width: 50%; margin-left: auto; margin-right: auto;"> Drucke hier ganz einfach deine erstelle Vokabelliste aus. So kannst du auch ganz ohne Strom immer darauf zugreifen.</p> 
-<div class="container" style="max-width:auto; display: inline-flex; justify-content:center;">
-<button id="printBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff;  ">Vokabelliste drucken </button> <br>
-</div>
-</div>
+<div class="container">
+  <div class="card">
+    <div class="card-header" style="background-color: #4984e3; color: #fff;">
+      Vokabelliste drucken
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Drucke deine Vokabelliste aus</h5>
+      <p class="card-text">Drucke hier ganz einfach deine erstelle Vokabelliste aus. So kannst du auch ganz ohne Strom immer darauf zugreifen.</p>
+      <button id="printBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff;  ">Vokabelliste drucken </button> <br>
+    </div>
+  </div>
+  </div>
+
+<br> <br>
   <div id="test">
     <p>PLATZHALTER FÜR DEN TEST <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto delectus magnam obcaecati labore aspernatur reprehenderit quos laborum enim animi? Autem dignissimos ratione ad. Suscipit, a voluptates. Sunt, saepe eius?</p>
 </div>
   
 </div>
 <br><br><br><br>
+</div>
 
 
 </body>
