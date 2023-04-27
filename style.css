@@ -152,3 +152,15 @@ table.boostrap4_table_head_dark_striped_rounded_with_shadow tr:last-of-type td:f
 table.boostrap4_table_head_dark_striped_rounded_with_shadow tr:last-of-type td:last-of-type {
   border-bottom-right-radius: 10px;
 }
+
+
+
+
+@media print {
+  #hidePrint {
+    display: none;
+  }
+  table.boostrap4_table_head_dark_striped_rounded_with_shadow col{
+    width: 2000px;
+  }
+}

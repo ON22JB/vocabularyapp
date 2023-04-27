@@ -85,7 +85,7 @@ function addVocabEn() {
   const timestamp = new Date();
   const newVocabEn: VocabEn = {
     description: newVocabEnInput.value, 
-    id: `${genUniqueId()}`,
+    id: genUniqueId(),
     timestamp,
   };
   vocabEn.push(newVocabEn);
@@ -102,7 +102,7 @@ function addVocabDe() {
   const timestamp = new Date();
   const newVocabDe: VocabDe = {
     description: newVocabDeInput.value,
-    id: `${genUniqueId()}`,
+    id: genUniqueId(),
     timestamp,
   };
   vocabDe.push(newVocabDe);
@@ -174,8 +174,9 @@ initApp();
 //print the vocabulary list table
 let printBtn = document.querySelector("#printBtn") as HTMLButtonElement;
 let printArea = document.querySelector("#printArea") as HTMLDivElement;
+
 function print() {
-  window.print();
+  window.print();  
 }
 printBtn.addEventListener("click", print);
 

@@ -13,7 +13,7 @@
 <body>
     <header>
 
-        <div class="header">
+        <div class="header" id="hidePrint">
             <div class="inner-header flex">
             <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
             <g><path fill="#fff"
@@ -44,7 +44,7 @@
           </header>
           
           <div style="margin-left:20%; margin-right:20%;">
-    <div class="container">
+    <div class="container" id="hidePrint">
         <br> <br>
         <h2> Funktionen im Überblick</h2> <br>
         <ul>
@@ -64,7 +64,7 @@
     </div>
 <br> <br>
 
-<div class="container">
+<div class="container" id="hidePrint">
 <div class="card">
   <div class="card-header" style="background-color: #4984e3; color: #fff;">
     Vollbildmodus
@@ -77,12 +77,12 @@
 </div>
 </div><br> <br> 
 
-<div class="container">
+<div class="container" id="hidePrint">
   <h3 >Neue Vokabeln hinzufügen:</h3> <br>
 <div  class="notice" style="max-width: 50%; margin-left: auto; margin-right: auto;">
     <div class="container" style="text-align: center;">
-    <input type="text"  style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabEnInput" id="newVocabEnInput" placeholder="Englisch" />
-    <input type="text" style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabDeInput" id="newVocabDeInput" placeholder="Deutsch"/> <br> 
+    <input type="text"  style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabEnInput" id="newVocabEnInput" placeholder="Englisch" maxlength = "20" />
+    <input type="text" style="border-radius: 5px; border-color: #000; border-width: thin; margin:2px;"name="newVocabDeInput" id="newVocabDeInput" placeholder="Deutsch" maxlength = "20" /> <br> 
     </div>
     <div class="container" style="max-width:auto; display: inline-flex; justify-content:center;">
     <button id="newVocabBtn" class="btn" style="border-radius: 1px; border-color: #4984e3;border-radius: 5px; background-color: #4984e3; color:#fff; margin:5px;">Hinzufügen</button>
@@ -91,24 +91,28 @@
     <br>
     <small><span id="validatorMessage"></span></small>
   </div> <br>
-<div class="printArea" id="printArea" >
-  <h5 style="text-align: center;"> Vokabelliste:</h5> <br>
-<table class="boostrap4_table_head_dark_striped_rounded_with_shadow" style="max-width: 50%; margin-left: auto; margin-right: auto; ">
+  </div>
+
+<div class="container" >
+  <h5 style="text-align: center;" > Vokabelliste:</h5> <br>
+<table id="printArea" class="boostrap4_table_head_dark_striped_rounded_with_shadow" style="max-width: 50%; margin-left: auto; margin-right: auto; ">
     <thead>
       <tr>
-        <th scope="col">Englisch</th>
-        <th scope="col">Deutsch</th>
+        <th scope="col" id="printArea">Englisch</th>
+        <th scope="col" id="printArea">Deutsch</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><div id="vocabEnContainer"></div></td>
-        <td><div id="vocabDeContainer"></div></td>
+        <td><div id="vocabEnContainer" class="printArea"></div></td>
+        <td><div id="vocabDeContainer" class="printArea"></div></td>
       </tr>
     </tbody>
   </table> <br>
+  </div>
 
-<div class="container">
+<div>
+<div class="container" id="hidePrint">
   <div class="card">
     <div class="card-header" style="background-color: #4984e3; color: #fff;">
       Vokabelliste drucken
@@ -122,18 +126,18 @@
   </div>
 
 <br> <br>
-  <div id="test">
+
+  <div id="hidePrint">
     <p>PLATZHALTER FÜR DEN TEST <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto delectus magnam obcaecati labore aspernatur reprehenderit quos laborum enim animi? Autem dignissimos ratione ad. Suscipit, a voluptates. Sunt, saepe eius?</p>
 </div>
-  
+
 </div>
 <br><br><br><br>
-</div>
 
 
 </body>
-<footer>
-    <div class="container">
+<footer >
+    <div class="container" id="hidePrint">
         <hr>
         <p style="text-align: center; color:#adadad; "> Jacqueline Bohn | ON22 | Mai 2023</p>
     </div>    
