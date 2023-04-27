@@ -46,24 +46,24 @@ function genUniqueId(): string {
 function validateInput() {
   if (!newVocabEnInput.value) {
       newVocabBtn.disabled = true;
-    setValidatorMesssage(ValidatorMessages.INPUT_EMTPY, true);
+    setValidatorMessage(ValidatorMessages.INPUT_EMTPY, true);
     return false;
   }
   if (!newVocabDeInput.value) {
       newVocabBtn.disabled = true;
-    setValidatorMesssage(ValidatorMessages.INPUT_EMTPY, true);
+    setValidatorMessage(ValidatorMessages.INPUT_EMTPY, true);
     return false;
   }
   else {
       newVocabBtn.disabled = false;
       emptyVocabBtn.disabled = false;
-    setValidatorMesssage(ValidatorMessages.INPUT_VALID);
+    setValidatorMessage(ValidatorMessages.INPUT_VALID);
     return true;
   }
 }
 
 //Messages for User after the check of input (write blue text)
-function setValidatorMesssage(msg: string, error = false) {
+function setValidatorMessage(msg: string, error = false) {
   validatorMessage.innerHTML = msg; 
     validatorMessage.style.color = "black";
 }
