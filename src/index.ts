@@ -119,7 +119,7 @@ function reloadVocabEn() {
     .forEach((vocabEn) => {
       const singleVocabEnContainer = document.createElement("div");
       singleVocabEnContainer.id = vocabEn.id;
-      singleVocabEnContainer.innerHTML = ` ${vocabEn.description}`;
+      singleVocabEnContainer.innerHTML = vocabEn.description;
       vocabEnContainer.appendChild(singleVocabEnContainer);
     });}
 
@@ -131,8 +131,9 @@ function reloadVocabEn() {
     .forEach((vocabDe) => {
       const singleVocabDeContainer = document.createElement("div");
       singleVocabDeContainer.id = vocabDe.id;
-      singleVocabDeContainer.innerHTML = `${vocabDe.description} `;
+      singleVocabDeContainer.innerHTML = vocabDe.description;
       vocabDeContainer.appendChild(singleVocabDeContainer);
+
     });
 }
 
@@ -156,6 +157,7 @@ function emptyVocabList(){
     vocabDe.pop();
   }
 }
+
 
 //main function
 function initApp() {
