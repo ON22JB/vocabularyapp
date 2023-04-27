@@ -110,6 +110,16 @@ function addVocabDe() {
   newVocabDeInput.value = "";
 }
 
+//Delete item from Vocab List
+//function deleteVocab() {
+//  let id: string;
+//  vocabDe = vocabDe.filter((vocab: VocabDe) => vocab.id !== id);
+//  reloadVocabDe();
+//  vocabEn = vocabEn.filter((vocab: VocabEn) => vocab.id !== id);
+//  reloadVocabEn();
+//}
+
+
 //Empty Vocabulary List, Create Container for Vocabulary (En)
 function reloadVocabEn() {
   vocabEnContainer.innerHTML = "";
@@ -121,6 +131,7 @@ function reloadVocabEn() {
       singleVocabEnContainer.id = vocabEn.id;
       singleVocabEnContainer.innerHTML = vocabEn.description;
       vocabEnContainer.appendChild(singleVocabEnContainer);
+      
     });}
 
 //Empty Vocabulary List, Create Container for Vocabulary (De)
@@ -133,11 +144,14 @@ function reloadVocabEn() {
       singleVocabDeContainer.id = vocabDe.id;
       singleVocabDeContainer.innerHTML = vocabDe.description;
       vocabDeContainer.appendChild(singleVocabDeContainer);
-
+      //const deleteBtn = document.createElement("button");
+      //deleteBtn.addEventListener("click", deleteVocab);
+      //deleteBtn.style.backgroundColor = "red";
+      //deleteBtn.innerHTML = "X";
     });
 }
 
-function hasPressedEnterKeyOnTodoInput(e: KeyboardEvent) {
+function hasPressedEnterKeyOnVocabInput(e: KeyboardEvent) {
   if (e.key === "Enter") {
     addVocabEn();
     addVocabDe(); 
@@ -168,8 +182,8 @@ function initApp() {
   fullScBtn.addEventListener("click", openFullscreen);
   newVocabEnInput.addEventListener("input", validateInput);
   newVocabDeInput.addEventListener("input", validateInput);
-  newVocabEnInput.addEventListener("keydown", hasPressedEnterKeyOnTodoInput);
-  newVocabDeInput.addEventListener("keydown", hasPressedEnterKeyOnTodoInput);
+  newVocabEnInput.addEventListener("keydown", hasPressedEnterKeyOnVocabInput);
+  newVocabDeInput.addEventListener("keydown", hasPressedEnterKeyOnVocabInput);
 }
 initApp();
 
